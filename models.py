@@ -28,3 +28,6 @@ class Video(Model):
     description: str = ormar.String(max_length=500)
     file: str = ormar.String(max_length=1000)
     user: Optional[User] = ormar.ForeignKey(User)
+
+
+
