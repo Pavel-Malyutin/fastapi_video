@@ -1,8 +1,7 @@
-from fastapi import FastAPI, UploadFile, File
+from fastapi import FastAPI
+from api import video_router
 
 app = FastAPI()
 
 
-@app.post('/')
-async def root(file: UploadFile = File(...)):
-    return {'file_name': file.filename}
+app.include_router(video_router)
