@@ -3,7 +3,6 @@ from typing import List
 from fastapi import APIRouter, UploadFile, File, Form, BackgroundTasks
 from starlette.responses import StreamingResponse, HTMLResponse
 from starlette.requests import Request
-from models import Video, User
 from services import save_video, open_file
 from schema import GetListVideo
 from starlette.templating import Jinja2Templates
